@@ -1,0 +1,158 @@
+/* Performance optimizations for CSS */
+
+/* Critical rendering path optimizations */
+* {
+  /* Use will-change sparingly and only when needed */
+  /* will-change: auto; */
+}
+
+/* GPU-accelerated transforms */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+/* Smooth scrolling with performance consideration */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Optimize font loading */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=optional');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=optional');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=optional');
+
+/* Contain layout thrashing */
+.tetris-board-container {
+  contain: layout style paint;
+}
+
+.game-stats-enhanced {
+  contain: layout style;
+}
+
+/* Optimize animations */
+@keyframes optimized-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  animation: optimized-spin 1s linear infinite;
+  /* Use transform instead of changing properties that trigger layout */
+  will-change: transform;
+}
+
+/* Optimize hover effects */
+.hover-lift {
+  /* Pre-apply transform to avoid initial paint */
+  transform: translateY(0);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Optimize images */
+img {
+  /* Enable hardware acceleration for image decoding */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Lazy loading placeholder styles */
+.lazy-image-container {
+  background-color: #f8f9fa;
+  background-image: 
+    linear-gradient(45deg, transparent 25%, rgba(255,255,255,.5) 25%, rgba(255,255,255,.5) 75%, transparent 75%, transparent),
+    linear-gradient(45deg, transparent 25%, rgba(255,255,255,.5) 25%, rgba(255,255,255,.5) 75%, transparent 75%, transparent);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Container queries for responsive design */
+@container (min-width: 768px) {
+  .responsive-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* Reduce paint operations */
+.no-select {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Optimize scrolling performance */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Critical CSS for above-the-fold content */
+.critical-path {
+  /* Ensure critical elements render quickly */
+  contain: layout;
+  content-visibility: auto;
+}
+
+/* Performance hints for browser */
+.prefetch-intent {
+  /* Use for elements that will likely be interacted with */
+  cursor: pointer;
+}
+
+/* Reduce reflow and repaint */
+.layout-stable {
+  /* Prevent layout shifts by reserving space */
+  min-height: 200px;
+  width: 100%;
+}
+
+/* Memory-efficient animations */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-on-scroll {
+    animation-fill-mode: both;
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Browser-specific optimizations */
+@supports (content-visibility: auto) {
+  .large-content {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+  }
+}
+
+/* Optimize table rendering */
+.performance-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Efficient grid layouts */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  contain: layout;
+}
