@@ -1,0 +1,178 @@
+/* Tetris Portfolio Styles */
+
+.tetris-block {
+  position: relative;
+  will-change: transform, opacity;
+}
+
+.tetris-block.portfolio-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.tetris-block.portfolio-block::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%, 
+    rgba(255, 255, 255, 0.1) 49%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 51%, 
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.tetris-board {
+  will-change: transform;
+  border-radius: 4px;
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+.tetris-board-empty {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Game state indicators */
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6666;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.score-display {
+  will-change: transform, color;
+}
+
+/* Page transition effects */
+.page-content {
+  will-change: transform, opacity;
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+  .tetris-block.portfolio-block::before {
+    animation-duration: 4s;
+  }
+  
+  .tetris-board {
+    box-shadow: 
+      0 0 10px rgba(0, 0, 0, 0.3),
+      inset 0 0 10px rgba(255, 255, 255, 0.02);
+  }
+}
+
+/* Button hover effects */
+.tetris-button {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tetris-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.3s ease;
+}
+
+.tetris-button:hover::before {
+  left: 100%;
+}
+
+.tetris-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Line clear effects */
+.line-clearing {
+  animation: lineClearFlash 0.6s ease-in-out;
+}
+
+@keyframes lineClearFlash {
+  0%, 50%, 100% {
+    background-color: inherit;
+  }
+  25%, 75% {
+    background-color: #ffffff;
+  }
+}
+
+/* Portfolio block text effects */
+.portfolio-text {
+  text-shadow: 
+    0 0 2px rgba(0, 0, 0, 0.8),
+    0 0 4px rgba(255, 255, 255, 0.3);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+/* Falling piece effects */
+.falling-piece {
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
+}
+
+/* Game board glow effect */
+.tetris-board.active {
+  box-shadow: 
+    0 0 30px rgba(255, 255, 255, 0.1),
+    inset 0 0 30px rgba(255, 255, 255, 0.02);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .tetris-block.portfolio-block::before,
+  .shimmer,
+  .line-clearing {
+    animation: none;
+  }
+  
+  .tetris-button {
+    transition: none;
+  }
+  
+  .tetris-button:hover {
+    transform: none;
+  }
+}
