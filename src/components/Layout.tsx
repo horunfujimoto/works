@@ -1,4 +1,4 @@
-import React, { type ReactNode, useRef, useEffect } from 'react';
+import React, { type ReactNode, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import TetrisBoard from './TetrisBoard';
 import { useTetrisGame } from '../hooks/useTetrisGame';

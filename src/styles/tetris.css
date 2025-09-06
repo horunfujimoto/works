@@ -3,6 +3,8 @@
 .tetris-block {
   position: relative;
   will-change: transform, opacity;
+  min-width: unset !important;
+  min-height: unset !important;
 }
 
 .tetris-block.portfolio-block {

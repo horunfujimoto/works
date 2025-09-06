@@ -39,16 +39,27 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
   };
 
   const portfolioType = getPortfolioType();
+  
+  // Determine if this is a colorful decorative block
+  const isColorfulBlock = !isPortfolio && (
+    color === '#42A5F5' || // J block - Blue
+    color === '#FF9800' || // O block - Orange  
+    color === '#66BB6A'    // Z block - Green
+  );
 
   const blockStyle: React.CSSProperties = {
-    width: `${size}px`,
-    height: `${size}px`,
+    width: `${size - 1}px`,
+    height: `${size - 1}px`,
     backgroundColor: color,
-    border: isPortfolio ? '2px solid rgba(255, 255, 255, 0.3)' : '2px solid #333333',
+    border: isPortfolio 
+      ? '0.5px solid rgba(255, 255, 255, 0.3)' 
+      : isColorfulBlock 
+        ? '0.5px solid rgba(255, 255, 255, 0.2)'
+        : '0.5px solid #333333',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: `${size * 0.22}px`,
+    fontSize: `${size * 0.18}px`,
     fontWeight: isPortfolio ? '700' : '600',
     color: '#ffffff',
     cursor: onClick ? 'pointer' : 'default',
@@ -60,12 +71,18 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
     textAlign: 'center',
     lineHeight: '0.9',
     boxShadow: isPortfolio 
-      ? '0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)' 
-      : '0 2px 4px rgba(0, 0, 0, 0.2)',
-    borderRadius: '2px',
+      ? '0 2px 6px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)' 
+      : isColorfulBlock
+        ? '0 2px 4px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
+        : '0 1px 2px rgba(0, 0, 0, 0.2)',
+    borderRadius: '1px',
     textShadow: isPortfolio ? '0 1px 2px rgba(0, 0, 0, 0.8)' : 'none',
-    letterSpacing: isPortfolio ? '-0.5px' : 'normal',
-    transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)'
+    letterSpacing: isPortfolio ? '-0.3px' : 'normal',
+    transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+    boxSizing: 'border-box',
+    margin: '0.5px',
+    minWidth: 'unset',
+    minHeight: 'unset'
   };
 
   // Animate new blocks when they appear

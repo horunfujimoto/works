@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
-import { TETROMINOS, getRandomTetromino, getPortfolioTetrominos } from '../utils/tetrominos';
+import { getRandomTetromino, getPortfolioTetrominos } from '../utils/tetrominos';
 import type { TetrominoData } from '../utils/tetrominos'; 
 
 // Game constants
@@ -87,13 +87,18 @@ export const useTetrisGame = (onNavigate?: (page: string) => void) => {
           const newX = x + col;
           const newY = y + row;
 
-          // Check boundaries
-          if (newX < 0 || newX >= BOARD_WIDTH || newY >= BOARD_HEIGHT) {
+          // Check left and right boundaries
+          if (newX < 0 || newX >= BOARD_WIDTH) {
             return false;
           }
 
-          // Check collision with existing blocks
-          if (newY >= 0 && board[newY][newX].filled) {
+          // Check bottom boundary
+          if (newY >= BOARD_HEIGHT) {
+            return false;
+          }
+
+          // Check collision with existing blocks (only if Y is within board)
+          if (newY >= 0 && board[newY] && board[newY][newX] && board[newY][newX].filled) {
             return false;
           }
         }
@@ -115,7 +120,8 @@ export const useTetrisGame = (onNavigate?: (page: string) => void) => {
           const x = piece.x + col;
           const y = piece.y + row;
 
-          if (y >= 0) {
+          // Ensure coordinates are within board bounds
+          if (y >= 0 && y < BOARD_HEIGHT && x >= 0 && x < BOARD_WIDTH) {
             newBoard[y][x] = {
               filled: true,
               color: piece.tetromino.color,
@@ -405,7 +411,7 @@ export const useTetrisGame = (onNavigate?: (page: string) => void) => {
           const x = currentPiece.x + col;
           const y = currentPiece.y + row;
 
-          if (y >= 0 && y < BOARD_HEIGHT && x >= 0 && x < BOARD_WIDTH) {
+          if (y >= 0 && y < BOARD_HEIGHT && x >= 0 && x < BOARD_WIDTH && displayBoard[y] && displayBoard[y][x]) {
             displayBoard[y][x] = {
               filled: true,
               color: currentPiece.tetromino.color,
@@ -421,7 +427,7 @@ export const useTetrisGame = (onNavigate?: (page: string) => void) => {
     }
 
     return displayBoard;
-  }, [gameState.board, gameState.currentPiece, onNavigate]);
+  }, [gameState, onNavigate]);
 
   return {
     gameState,

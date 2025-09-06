@@ -78,22 +78,22 @@ const generateRotations = (baseShape: number[][]): number[][][] => {
   return rotations;
 };
 
-// Define colors using the white/grey/black theme
+// Define colors - Portfolio blocks use white/grey theme, others use vibrant colors
 const TETROMINO_COLORS = {
   I: '#FFFFFF', // White - for WORKS
-  J: '#CCCCCC', // Light Grey
-  L: '#999999', // Medium Grey - for CAREER (CA/REER shape)
-  O: '#666666', // Dark Grey
+  J: '#42A5F5', // Blue - vibrant color for decoration
+  L: '#999999', // Medium Grey - for CAREER
+  O: '#FF9800', // Orange - vibrant color for decoration  
   S: '#444444', // Darker Grey - for ARTICLES
   T: '#333333', // Very Dark Grey - for HOBBIES
-  Z: '#222222'  // Almost Black
+  Z: '#66BB6A'  // Green - vibrant color for decoration
 };
 
 // Portfolio page mapping
 const PORTFOLIO_MAPPING = {
-  L: { page: 'CAREER', text: 'CA\nREER' },
-  S: { page: 'ARTICLES', text: 'ART\nICL' },
-  T: { page: 'HOBBIES', text: 'HOB\nBIE' },
+  L: { page: 'CAREER', text: 'CAREER' },
+  S: { page: 'ARTICLES', text: 'ARTICLES' },
+  T: { page: 'HOBBIES', text: 'HOBBIES' },
   I: { page: 'WORKS', text: 'WORKS' }
 };
 

@@ -12,10 +12,6 @@ export default function Home() {
   const prevScore = useRef(0);
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' && window.innerWidth < 768);
   
-  const handleNavigation = (page: string) => {
-    console.log(`Navigating to ${page}`);
-    navigate(`/${page.toLowerCase()}`);
-  };
 
   const {
     getCurrentBoard,
@@ -30,14 +26,26 @@ export default function Home() {
 
   const currentBoard = getCurrentBoard();
 
-  // Handle window resize
+  // Handle window resize and layout changes
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
+    // Also listen for potential layout changes (like when side panels open)
+    const handleLayoutChange = () => {
+      // Force a resize check with a small delay to ensure layout has settled
+      setTimeout(handleResize, 100);
+    };
+
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    // Listen for any potential navigation changes that might affect layout
+    window.addEventListener('popstate', handleLayoutChange);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('popstate', handleLayoutChange);
+    };
   }, []);
 
   // Auto-start game on component mount
@@ -45,7 +53,7 @@ export default function Home() {
     if (!gameState.isPlaying && !gameState.gameOver) {
       startGame();
     }
-  }, []);
+  }, [gameState.isPlaying, gameState.gameOver, startGame]);
 
   // Animate score changes and announce to screen readers
   useEffect(() => {
@@ -308,7 +316,7 @@ export default function Home() {
         </div>
         <TetrisBoard
           board={currentBoard}
-          blockSize={isMobile ? 25 : 30}
+          blockSize={isMobile ? 32 : 40}
           className={`main-tetris-board hover-glow ${gameState.isPlaying ? 'active animate-glow' : ''} ${isMobile ? 'mobile' : ''}`}
         />
       </main>

@@ -163,11 +163,16 @@
 }
 
 /* Ensure interactive elements meet minimum size requirements */
-.tetris-block[role="button"],
 .game-button,
 .touch-controls button {
   min-width: 44px;
   min-height: 44px;
+}
+
+/* Tetris blocks have their own sizing logic and should not be constrained by accessibility minimums */
+.tetris-block[role="button"] {
+  min-width: unset;
+  min-height: unset;
 }
 
 /* Error and status messages */
