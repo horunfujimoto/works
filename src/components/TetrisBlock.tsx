@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, memo } from 'react';
+import React, { useRef, useEffect, memo, useState } from 'react';
 import { animateHover, animatePortfolioClick, animateBlockPlace } from '../utils/animations';
 import { getBlockDescription } from '../utils/accessibility';
 
@@ -26,6 +26,17 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
   ariaLabel
 }) => {
   const blockRef = useRef<HTMLDivElement>(null);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' && window.innerWidth < 768);
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Determine portfolio section type for styling
   const getPortfolioType = () => {
@@ -38,7 +49,24 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
     return null;
   };
 
+  // Map portfolio type to icon and full text
+  const getPortfolioInfo = (portfolioType: string | null) => {
+    switch (portfolioType) {
+      case 'career':
+        return { icon: 'fa-briefcase', fullText: 'CAREER' };
+      case 'articles':
+        return { icon: 'fa-file-alt', fullText: 'ARTICLES' };
+      case 'hobbies':
+        return { icon: 'fa-gamepad', fullText: 'HOBBIES' };
+      case 'works':
+        return { icon: 'fa-cogs', fullText: 'WORKS' };
+      default:
+        return { icon: '', fullText: text || '' };
+    }
+  };
+
   const portfolioType = getPortfolioType();
+  const portfolioInfo = getPortfolioInfo(portfolioType);
   
   // Determine if this is a colorful decorative block
   const isColorfulBlock = !isPortfolio && (
@@ -94,6 +122,17 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
 
   const handleClick = async () => {
     if (onClick && blockRef.current) {
+      // Mobile tap-to-show-tooltip functionality
+      if (isMobile && isPortfolio) {
+        if (!showTooltip) {
+          // First tap: show tooltip
+          setShowTooltip(true);
+          return;
+        }
+        // Second tap: navigate (hide tooltip and proceed)
+        setShowTooltip(false);
+      }
+      
       // Animate click before navigation
       await animatePortfolioClick(blockRef.current);
       onClick();
@@ -114,6 +153,10 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
       if (isPortfolio) {
         blockRef.current.style.filter = 'brightness(1.1) saturate(1.1)';
         blockRef.current.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)';
+        // Show tooltip on hover for PC
+        if (!isMobile) {
+          setShowTooltip(true);
+        }
       }
     }
   };
@@ -125,6 +168,10 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
       if (isPortfolio) {
         blockRef.current.style.filter = 'none';
         blockRef.current.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+        // Hide tooltip on mouse leave for PC
+        if (!isMobile) {
+          setShowTooltip(false);
+        }
       }
     }
   };
@@ -149,7 +196,14 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
       aria-label={accessibilityLabel}
       aria-describedby={isPortfolio ? `portfolio-block-${position.row}-${position.col}` : undefined}
     >
-      <span className={isPortfolio ? 'portfolio-text' : ''}>{text}</span>
+      {isPortfolio && portfolioInfo.icon ? (
+        <i className={`fa-solid ${portfolioInfo.icon}`} style={{ 
+          fontSize: `${size * 0.4}px`,
+          color: '#ffffff'
+        }} />
+      ) : (
+        <span className={isPortfolio ? 'portfolio-text' : ''}>{text}</span>
+      )}
       {isPortfolio && (
         <>
           {/* Subtle gradient overlay */}
@@ -202,6 +256,48 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
               pointerEvents: 'none'
             }}
           />
+          
+          {/* Tooltip */}
+          {showTooltip && (
+            <div
+              style={{
+                position: 'absolute',
+                bottom: '100%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                marginBottom: '8px',
+                backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                color: '#ffffff',
+                padding: '8px 12px',
+                borderRadius: '4px',
+                fontSize: '12px',
+                fontWeight: '600',
+                whiteSpace: 'nowrap',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+                zIndex: 1000,
+                backdropFilter: 'blur(10px)',
+                letterSpacing: '0.5px',
+                pointerEvents: 'none'
+              }}
+            >
+              {portfolioInfo.fullText}
+              {/* Arrow pointing down */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '100%',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '0',
+                  height: '0',
+                  borderLeft: '4px solid transparent',
+                  borderRight: '4px solid transparent',
+                  borderTop: '4px solid rgba(0, 0, 0, 0.9)'
+                }}
+              />
+            </div>
+          )}
         </>
       )}
     </div>
