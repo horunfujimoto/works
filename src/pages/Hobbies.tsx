@@ -149,7 +149,7 @@ const Hobbies: React.FC = () => {
             letterSpacing: '-0.02em',
             lineHeight: '1.1'
           }}>
-            🎨 Hobbies & Interests
+            🎨 ホビー
           </h1>
           <p style={{ 
             fontSize: isMobile ? '1.1rem' : '1.2rem', 
