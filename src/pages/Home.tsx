@@ -201,7 +201,7 @@ export default function Home() {
           backgroundClip: 'text',
           textShadow: 'none'
         }}>
-          🎮 Tetris Portfolio
+          ハローワールド
         </h1>
         <p style={{ 
           fontSize: isMobile ? '1rem' : '1.2rem', 

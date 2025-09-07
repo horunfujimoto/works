@@ -160,7 +160,7 @@ const Articles: React.FC = () => {
             letterSpacing: '-0.02em',
             lineHeight: '1.1'
           }}>
-            📚 Articles
+            📚 アーティクル
           </h1>
           <p style={{ 
             fontSize: isMobile ? '1.1rem' : '1.2rem', 

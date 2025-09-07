@@ -36,9 +36,9 @@
   --color-active-overlay: rgba(255, 255, 255, 0.2);
   
   /* Typography */
-  --font-family-primary: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-primary: 'Nico Moji', 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-secondary: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-  --font-family-display: 'Poppins', 'Inter', sans-serif;
+  --font-family-display: 'Nikukyu', 'Poppins', 'Inter', sans-serif;
   
   --font-size-xs: 0.75rem;      /* 12px */
   --font-size-sm: 0.875rem;     /* 14px */
@@ -121,6 +121,41 @@ body {
 
 .font-mono {
   font-family: var(--font-family-secondary);
+}
+
+/* ===== HEADING STYLES ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nikukyu', var(--font-family-display) !important;
+  font-weight: var(--font-weight-bold) !important;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary-black);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+}
+
+h6 {
+  font-size: var(--font-size-base);
 }
 
 .text-xs { font-size: var(--font-size-xs); }
