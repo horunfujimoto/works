@@ -1,8 +1,7 @@
 import React, { type ReactNode, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import TetrisBoard from './TetrisBoard';
-import { useTetrisGame } from '../hooks/useTetrisGame';
-import { useNavigate } from 'react-router-dom';
+import { useTetrisGameContext } from '../contexts/TetrisGameContext';
 import { animatePageEnter } from '../utils/animations';
 import { announceToScreenReader, createSkipLink } from '../utils/accessibility';
 
@@ -12,14 +11,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
-  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
   const contentRef = useRef<HTMLDivElement>(null);
-
-  const handleNavigation = (page: string) => {
-    console.log(`Navigating to ${page}`);
-    navigate(`/${page.toLowerCase()}`);
-  };
 
   const {
     gameState,
@@ -30,7 +23,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     togglePause,
     resetGame,
     getCurrentBoard
-  } = useTetrisGame(handleNavigation);
+  } = useTetrisGameContext();
 
   const currentBoard = getCurrentBoard();
 

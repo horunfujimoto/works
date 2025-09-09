@@ -25,11 +25,6 @@ const Hobbies: React.FC = () => {
     paddingBottom: '20px'
   };
 
-  const hobbyStyle: React.CSSProperties = {
-    marginBottom: '30px',
-    paddingBottom: '20px',
-    borderBottom: '1px solid #e0e0e0'
-  };
 
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
@@ -52,14 +47,6 @@ const Hobbies: React.FC = () => {
     border: '1px solid var(--color-tertiary-grey)'
   };
 
-  const imageStyle: React.CSSProperties = {
-    width: '100%',
-    maxWidth: '300px',
-    height: '200px',
-    objectFit: 'cover',
-    borderRadius: '8px',
-    marginBottom: '15px'
-  };
 
   const gridStyle: React.CSSProperties = {
     display: 'grid',

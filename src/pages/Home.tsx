@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import TetrisBoard from '../components/TetrisBoard';
 import TouchControls from '../components/TouchControls';
-import { useTetrisGame } from '../hooks/useTetrisGame';
+import { useTetrisGameContext } from '../contexts/TetrisGameContext';
 import { animateScoreIncrement } from '../utils/animations';
 import { announceToScreenReader, getGameStateDescription } from '../utils/accessibility';
 
 export default function Home() {
-  const navigate = useNavigate();
   const scoreRef = useRef<HTMLDivElement>(null);
   const prevScore = useRef(0);
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' && window.innerWidth < 768);
@@ -22,7 +20,7 @@ export default function Home() {
     togglePause,
     resetGame,
     gameState
-  } = useTetrisGame((page) => navigate(`/${page.toLowerCase()}`));
+  } = useTetrisGameContext();
 
   const currentBoard = getCurrentBoard();
 

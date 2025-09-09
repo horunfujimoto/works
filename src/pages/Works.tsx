@@ -60,12 +60,6 @@ const Works: React.FC = () => {
     transition: 'transform 0.2s ease, box-shadow 0.2s ease'
   };
 
-  const imageStyle: React.CSSProperties = {
-    width: '100%',
-    height: '200px',
-    objectFit: 'cover'
-  };
-
   const contentStyle: React.CSSProperties = {
     padding: '20px'
   };
