@@ -5,7 +5,7 @@ const Articles: React.FC = () => {
   const pageStyle: React.CSSProperties = {
     backgroundColor: '#f5f5f5',
     color: '#333333',
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'RocknRoll One, cursive',
     padding: '40px 20px'
   };
 
@@ -43,7 +43,7 @@ const Articles: React.FC = () => {
     textDecoration: 'none',
     borderRadius: 'var(--radius-lg)',
     fontSize: isMobile ? '14px' : '15px',
-    fontFamily: 'var(--font-family-primary)',
+    fontFamily: 'RocknRoll One, cursive',
     fontWeight: '500',
     minHeight: '44px',
     touchAction: 'manipulation',
@@ -65,35 +65,35 @@ const Articles: React.FC = () => {
 
   const articles = [
     {
-      title: "🎮 Building Interactive Tetris Portfolio with React",
+      title: "🎮 Reactでテトリスポートフォリオを作る",
       date: "2025-01-28",
-      tags: ["React", "TypeScript", "Game Development", "Portfolio"],
-      excerpt: "A comprehensive guide on creating an interactive portfolio using Tetris game mechanics. This article covers the complete implementation from basic game logic to navigation integration, demonstrating how to combine gaming elements with professional presentation to create a memorable user experience. Includes code examples, architecture decisions, and accessibility considerations.",
-      readTime: "12 min read",
+      tags: ["React", "TypeScript", "ゲーム開発", "ポートフォリオ"],
+      excerpt: "テトリスのゲームメカニクスを使ったインタラクティブポートフォリオの作成ガイド。ゲーム要素とプロフェッショナルなプレゼンテーションを融合したユニークな体験を実現。",
+      readTime: "12分",
       featured: true
     },
     {
-      title: "⚡ React 19 Performance Patterns & Optimization Techniques",
+      title: "⚡ React 19 パフォーマンス最適化テクニック",
       date: "2025-01-20",
-      tags: ["React 19", "Performance", "Optimization", "Hooks"],
-      excerpt: "Explore advanced performance optimization techniques in React 19. From the new concurrent features to efficient state management patterns, learn how to build lightning-fast applications. Covers React Compiler, automatic memoization, and real-world performance metrics from production applications.",
-      readTime: "15 min read",
+      tags: ["React 19", "パフォーマンス", "最適化"],
+      excerpt: "React 19の新機能を活用したパフォーマンス最適化手法を解説。同時実行機能や状態管理パターンで高速アプリを構築。",
+      readTime: "15分",
       featured: true
     },
     {
-      title: "🚀 TypeScript 5.3: Advanced Type System Patterns",
+      title: "🚀 TypeScript 5.3 高度な型システムパターン",
       date: "2025-01-12",
-      tags: ["TypeScript", "Advanced Types", "Development", "Code Quality"],
-      excerpt: "Deep dive into TypeScript 5.3's advanced type system features. Learn about template literal types, conditional types, and mapped types through practical examples. Perfect for developers who want to master TypeScript's type system and write more expressive, type-safe code.",
-      readTime: "18 min read",
+      tags: ["TypeScript", "高度な型", "開発"],
+      excerpt: "TypeScript 5.3の高度な型システム機能を探求。テンプレートリテラル型、条件型、マップ型などを実用例で学習。",
+      readTime: "18分",
       featured: false
     },
     {
-      title: "🎨 Modern CSS: Container Queries & CSS Grid Subgrid",
+      title: "🎨 モダンCSS: コンテナクエリ & CSS Grid Subgrid",
       date: "2025-01-05",
-      tags: ["CSS", "Container Queries", "Grid", "Responsive Design"],
-      excerpt: "Explore the latest CSS features that are revolutionizing responsive design. Container queries allow components to respond to their container size, while CSS Grid subgrid enables more sophisticated layouts. Includes browser support info and practical implementation examples.",
-      readTime: "10 min read",
+      tags: ["CSS", "コンテナクエリ", "Grid", "レスポンシブデザイン"],
+      excerpt: "レスポンシブデザインを革新する最新CSS機能。コンテナクエリとCSS Grid subgridでより高度なレイアウトを実現。",
+      readTime: "10分",
       featured: false
     },
     {
@@ -148,7 +148,7 @@ const Articles: React.FC = () => {
             e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
           }}
         >
-          🎮 ← Back to Tetris Portfolio
+          🎮 ← テトリスポートフォリオに戻る
         </Link>
 
         <header style={headerStyle}>
@@ -166,10 +166,10 @@ const Articles: React.FC = () => {
             fontSize: isMobile ? '1.1rem' : '1.2rem', 
             color: 'var(--color-tertiary-grey)', 
             margin: '15px 0 0 0',
-            fontFamily: 'var(--font-family-primary)',
+            fontFamily: 'RocknRoll One, cursive',
             fontWeight: '400'
           }}>
-            Technical Insights, Tutorials & Industry Knowledge
+            技術や業界に関する洞察
           </p>
         </header>
 
@@ -220,7 +220,7 @@ const Articles: React.FC = () => {
                 <span style={{ 
                   color: 'var(--color-tertiary-grey)', 
                   fontSize: isMobile ? '13px' : '14px',
-                  fontFamily: 'var(--font-family-secondary)'
+                  fontFamily: 'RocknRoll One, cursive'
                 }}>
                   📅 {new Date(article.date).toLocaleDateString('en-US', {
                     year: 'numeric',
@@ -241,7 +241,7 @@ const Articles: React.FC = () => {
                 color: 'var(--color-primary-grey)', 
                 margin: '0 0 15px 0',
                 fontSize: isMobile ? '1.3rem' : '1.5rem',
-                fontFamily: 'var(--font-family-display)',
+                fontFamily: 'RocknRoll One, cursive',
                 fontWeight: '700',
                 lineHeight: '1.3',
                 letterSpacing: '-0.01em'
@@ -272,7 +272,7 @@ const Articles: React.FC = () => {
                 lineHeight: '1.7',
                 margin: '0 0 20px 0',
                 fontSize: isMobile ? '14px' : '15px',
-                fontFamily: 'var(--font-family-primary)'
+                fontFamily: 'RocknRoll One, cursive'
               }}>
                 {article.excerpt}
               </p>
@@ -286,7 +286,7 @@ const Articles: React.FC = () => {
                   borderRadius: 'var(--radius-lg)',
                   cursor: 'pointer',
                   fontSize: isMobile ? '13px' : '14px',
-                  fontFamily: 'var(--font-family-primary)',
+                  fontFamily: 'RocknRoll One, cursive',
                   fontWeight: '600',
                   transition: 'all 0.2s ease',
                   minHeight: '40px',
@@ -302,7 +302,7 @@ const Articles: React.FC = () => {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                Read Full Article →
+記事を読む →
               </button>
             </article>
           ))}
@@ -325,20 +325,20 @@ const Articles: React.FC = () => {
             color: 'var(--color-primary-grey)', 
             margin: '0 0 12px 0',
             fontSize: isMobile ? '1.3rem' : '1.5rem',
-            fontFamily: 'var(--font-family-display)',
+            fontFamily: 'RocknRoll One, cursive',
             fontWeight: '700'
           }}>
-            Stay Updated with Latest Articles
+            最新記事の更新を受け取る
           </h3>
           <p style={{ 
             color: 'var(--color-tertiary-grey)', 
             margin: '0 0 20px 0',
             fontSize: isMobile ? '14px' : '16px',
-            fontFamily: 'var(--font-family-primary)',
+            fontFamily: 'RocknRoll One, cursive',
             lineHeight: '1.6'
           }}>
-            Get notified about new technical articles, tutorials, and industry insights.<br/>
-            Join 500+ developers who read my weekly newsletter.
+新しい技術記事や業界の洞察を通知で受け取りましょう。<br/>
+500+開発者が読む週刊ニュースレターに参加。
           </p>
           <button 
             style={{
@@ -349,7 +349,7 @@ const Articles: React.FC = () => {
               borderRadius: 'var(--radius-lg)',
               cursor: 'pointer',
               fontSize: isMobile ? '14px' : '16px',
-              fontFamily: 'var(--font-family-primary)',
+              fontFamily: 'RocknRoll One, cursive',
               fontWeight: '600',
               transition: 'all 0.2s ease',
               minHeight: '48px',
@@ -365,7 +365,7 @@ const Articles: React.FC = () => {
               e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
             }}
           >
-            📧 Subscribe to Newsletter
+            📧 ニュースレター登録
           </button>
           <p style={{ 
             color: 'var(--color-quaternary-grey)', 
@@ -373,7 +373,7 @@ const Articles: React.FC = () => {
             fontSize: '12px',
             fontStyle: 'italic'
           }}>
-            No spam, unsubscribe anytime
+スパムなし、いつでも登録解除可能
           </p>
         </div>
       </div>

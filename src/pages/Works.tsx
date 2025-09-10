@@ -5,7 +5,7 @@ const Works: React.FC = () => {
   const pageStyle: React.CSSProperties = {
     backgroundColor: '#f5f5f5',
     color: '#333333',
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'RocknRoll One, cursive',
     padding: '40px 20px'
   };
 
@@ -37,7 +37,7 @@ const Works: React.FC = () => {
     textDecoration: 'none',
     borderRadius: 'var(--radius-lg)',
     fontSize: isMobile ? '14px' : '15px',
-    fontFamily: 'var(--font-family-primary)',
+    fontFamily: 'RocknRoll One, cursive',
     fontWeight: '500',
     minHeight: '44px',
     touchAction: 'manipulation',
@@ -77,8 +77,8 @@ const Works: React.FC = () => {
 
   const projects = [
     {
-      title: "🎮 Tetris Portfolio Website",
-      description: "An innovative interactive portfolio that transforms the classic Tetris game into a navigation system. Users can play Tetris while clicking on portfolio blocks (CAREER, ARTICLES, HOBBIES, WORKS) to explore different sections. Features custom game logic, smooth GSAP animations, full accessibility compliance, and responsive design. This project demonstrates the perfect blend of entertainment and functionality.",
+      title: "🎮 テトリスポートフォリオサイト",
+      description: "クラシックなテトリスゲームをナビゲーションシステムに変えた革新的なインタラクティブポートフォリオ。ユーザーはテトリスをプレイしながらポートフォリオブロックをクリックして各セクションを探索可能。エンターテインメントと機能性の完美な融合を実現。",
       icon: "🎮",
       technologies: ["React 19", "TypeScript", "GSAP", "Custom Game Logic", "CSS Grid", "Accessibility"],
       status: "Featured",
@@ -96,8 +96,8 @@ const Works: React.FC = () => {
       }
     },
     {
-      title: "📊 TechFlow Analytics Dashboard",
-      description: "A comprehensive real-time analytics platform for enterprise clients, featuring advanced data visualization, custom reporting, and predictive analytics. Built with modern React patterns and optimized for handling large datasets. Includes interactive charts, real-time WebSocket updates, and exportable reports in multiple formats.",
+      title: "📊 TechFlow アナリティクスダッシュボード",
+      description: "エンタープライズ向け総合リアルタイムアナリティクスプラットフォーム。高度データ可視化、カスタムレポート、予測分析機能を備えています。モダンReactパターンで構築し大量データセット処理に最適化。",
       icon: "📊",
       technologies: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis", "WebSocket"],
       status: "Production",
@@ -115,8 +115,8 @@ const Works: React.FC = () => {
       }
     },
     {
-      title: "🎨 Creative Studio Platform",
-      description: "A collaborative platform for creative professionals including designers, artists, and content creators. Features project management, asset sharing, real-time collaboration tools, and integrated version control. Built with a focus on user experience and creative workflow optimization.",
+      title: "🎨 クリエイティブスタジオプラットフォーム",
+      description: "デザイナー、アーティスト、コンテンツクリエイターのコラボレーティブプラットフォーム。プロジェクト管理、アセット共有、リアルタイムコラボツールを備えています。",
       icon: "🎨",
       technologies: ["Next.js", "Prisma", "Socket.io", "AWS S3", "Stripe", "WebRTC"],
       status: "Live",
@@ -261,7 +261,7 @@ const Works: React.FC = () => {
             e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
           }}
         >
-          🎮 ← Back to Tetris Portfolio
+          🎮 ← テトリスポートフォリオに戻る
         </Link>
 
         <header style={headerStyle}>
@@ -279,10 +279,10 @@ const Works: React.FC = () => {
             fontSize: isMobile ? '1.1rem' : '1.2rem', 
             color: 'var(--color-tertiary-grey)', 
             margin: '15px 0 0 0',
-            fontFamily: 'var(--font-family-primary)',
+            fontFamily: 'RocknRoll One, cursive',
             fontWeight: '400'
           }}>
-            Featured Projects, Open Source Contributions & Creative Experiments
+主要プロジェクトとオープンソース貢献
           </p>
         </header>
 
@@ -293,11 +293,10 @@ const Works: React.FC = () => {
             color: 'var(--color-secondary-grey)',
             maxWidth: '800px',
             margin: '0 auto',
-            fontFamily: 'var(--font-family-primary)'
+            fontFamily: 'RocknRoll One, cursive'
           }}>
-            A curated collection of projects spanning web applications, developer tools, creative experiments, and open source contributions. 
-            Each project represents a unique challenge solved, a new technology explored, or a creative vision brought to life. 
-            From interactive experiences to enterprise solutions—here's what I've been building. ✨
+Webアプリ、開発ツール、クリエイティブ実験、オープンソース貢献にまたがるプロジェクトのキュレーション。
+各プロジェクトはユニークな課題解決、新技術探求、クリエイティブビジョン実現を表しています。✨
           </p>
         </div>
 
@@ -319,7 +318,7 @@ const Works: React.FC = () => {
                 borderRadius: 'var(--radius-lg)',
                 cursor: 'pointer',
                 fontSize: isMobile ? '13px' : '14px',
-                fontFamily: 'var(--font-family-primary)',
+                fontFamily: 'RocknRoll One, cursive',
                 fontWeight: '500',
                 transition: 'all 0.2s ease'
               }}
@@ -428,7 +427,7 @@ const Works: React.FC = () => {
                       color: 'var(--color-primary-grey)', 
                       margin: '0 0 4px 0',
                       fontSize: isMobile ? '1.2rem' : '1.3rem',
-                      fontFamily: 'var(--font-family-display)',
+                      fontFamily: 'RocknRoll One, cursive',
                       fontWeight: '700',
                       lineHeight: '1.3'
                     }}>
@@ -463,7 +462,7 @@ const Works: React.FC = () => {
                   lineHeight: '1.6',
                   margin: '0 0 16px 0',
                   fontSize: isMobile ? '14px' : '15px',
-                  fontFamily: 'var(--font-family-primary)'
+                  fontFamily: 'RocknRoll One, cursive'
                 }}>
                   {project.description}
                 </p>
@@ -539,7 +538,7 @@ const Works: React.FC = () => {
                       e.currentTarget.style.boxShadow = 'none';
                     }}
                   >
-                    👁️ View Demo
+  👁️ デモを見る
                   </button>
                   <button 
                     style={{
@@ -565,7 +564,7 @@ const Works: React.FC = () => {
                       e.currentTarget.style.transform = 'translateY(0)';
                     }}
                   >
-                    💻 Code
+  💻 コード
                   </button>
                 </div>
               </div>
@@ -590,22 +589,22 @@ const Works: React.FC = () => {
             color: 'var(--color-primary-grey)', 
             margin: '0 0 16px 0',
             fontSize: isMobile ? '1.3rem' : '1.5rem',
-            fontFamily: 'var(--font-family-display)',
+            fontFamily: 'RocknRoll One, cursive',
             fontWeight: '700'
           }}>
-            Ready to Build Something Amazing?
+素晴らしい作品を一緒に作りませんか？
           </h3>
           <p style={{ 
             color: 'var(--color-secondary-grey)', 
             margin: '0 0 24px 0',
             lineHeight: '1.7',
             fontSize: isMobile ? '15px' : '16px',
-            fontFamily: 'var(--font-family-primary)',
+            fontFamily: 'RocknRoll One, cursive',
             maxWidth: '600px',
           }}>
-            I'm always excited to discuss new projects, innovative ideas, and opportunities to collaborate. 
-            Whether you need a technical partner, want to contribute to open source, or have a crazy idea that needs building—
-            let's turn concepts into reality! 💡
+新プロジェクト、革新的アイデア、コラボ機会について話し合うことにいつも想狀しています。
+技術パートナーが必要でも、オープンソース貢献でも、クレイジーアイデア実現でも—
+コンセプトを現実に変えましょう！💡
           </p>
           <div style={{ 
             display: 'flex', 
@@ -624,7 +623,7 @@ const Works: React.FC = () => {
                 borderRadius: 'var(--radius-lg)',
                 cursor: 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
-                fontFamily: 'var(--font-family-primary)',
+                fontFamily: 'RocknRoll One, cursive',
                 fontWeight: '600',
                 transition: 'all 0.2s ease',
                 minHeight: '48px',
@@ -641,7 +640,7 @@ const Works: React.FC = () => {
                 e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
               }}
             >
-              💬 Let's Collaborate
+💬 コラボレーションしましょう
             </button>
             <button 
               style={{
@@ -652,7 +651,7 @@ const Works: React.FC = () => {
                 borderRadius: 'var(--radius-lg)',
                 cursor: 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
-                fontFamily: 'var(--font-family-primary)',
+                fontFamily: 'RocknRoll One, cursive',
                 fontWeight: '600',
                 transition: 'all 0.2s ease',
                 minHeight: '48px',
@@ -670,7 +669,7 @@ const Works: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              📄 View Resume
+📄 履歴書を見る
             </button>
           </div>
           <p style={{ 
@@ -679,7 +678,7 @@ const Works: React.FC = () => {
             fontSize: '13px',
             fontStyle: 'italic'
           }}>
-            Open to freelance projects, full-time opportunities, and interesting collaborations
+フリーランスプロジェクト、正社員の機会、興味深いコラボレーションにオープン
           </p>
         </div>
       </div>

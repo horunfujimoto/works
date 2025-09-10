@@ -5,7 +5,7 @@ const Career: React.FC = () => {
   const pageStyle: React.CSSProperties = {
     backgroundColor: '#f5f5f5',
     color: '#333333',
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'RocknRoll One, cursive',
     padding: '40px 20px'
   };
 
@@ -47,7 +47,7 @@ const Career: React.FC = () => {
     textDecoration: 'none',
     borderRadius: 'var(--radius-lg)',
     fontSize: isMobile ? '14px' : '15px',
-    fontFamily: 'var(--font-family-primary)',
+    fontFamily: 'RocknRoll One, cursive',
     fontWeight: '500',
     minHeight: '44px',
     touchAction: 'manipulation',
@@ -74,7 +74,7 @@ const Career: React.FC = () => {
             e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
           }}
         >
-          🎮 ← Back to Tetris Portfolio
+          🎮 ← テトリスポートフォリオに戻る
         </Link>
 
         <header style={headerStyle}>
@@ -92,89 +92,81 @@ const Career: React.FC = () => {
             fontSize: isMobile ? '1.1rem' : '1.2rem', 
             color: 'var(--color-tertiary-grey)', 
             margin: '15px 0 0 0',
-            fontFamily: 'var(--font-family-primary)',
+            fontFamily: 'RocknRoll One, cursive',
             fontWeight: '400'
           }}>
-            Professional Experience & Education Journey
+            職歴と学歴
           </p>
         </header>
 
         <section style={sectionStyle}>
-          <h2 style={{ color: '#333333', marginBottom: '20px' }}>Work Experience</h2>
+          <h2 style={{ color: '#333333', marginBottom: '20px' }}>職歴</h2>
           
           <div style={experienceItemStyle}>
-            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>Senior Full Stack Developer</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>シニアフルスタック開発者</h3>
             <p style={{ color: '#666666', margin: '0 0 10px 0', fontStyle: 'italic' }}>
-              TechFlow Solutions | 2023 - Present
+              TechFlow Solutions | 2023年 - 現在
             </p>
             <ul style={{ color: '#555555', lineHeight: '1.6' }}>
-              <li>Architected and developed scalable web applications using React 18+, Next.js, and TypeScript</li>
-              <li>Built responsive game-like interfaces including Tetris-style portfolio websites</li>
-              <li>Implemented real-time features using WebSocket APIs and server-sent events</li>
-              <li>Led code reviews and mentored 3 junior developers on modern development practices</li>
-              <li>Optimized application performance achieving 95+ Lighthouse scores across all metrics</li>
+              <li>React、Next.js、TypeScriptによるWebアプリケーション開発</li>
+              <li>テトリス風ポートフォリオなどのインタラクティブUI構築</li>
+              <li>チームリーダーとして3名のジュニア開発者を指導</li>
             </ul>
           </div>
 
           <div style={experienceItemStyle}>
-            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>Frontend Developer</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>フロントエンド開発者</h3>
             <p style={{ color: '#666666', margin: '0 0 10px 0', fontStyle: 'italic' }}>
-              Digital Innovation Labs | 2021 - 2023
+              Digital Innovation Labs | 2021年 - 2023年
             </p>
             <ul style={{ color: '#555555', lineHeight: '1.6' }}>
-              <li>Developed interactive web applications using React, Vue.js, and Angular frameworks</li>
-              <li>Created responsive design systems and component libraries used across 10+ projects</li>
-              <li>Collaborated with UX designers to implement pixel-perfect user interfaces</li>
-              <li>Integrated RESTful APIs and GraphQL endpoints for data management</li>
-              <li>Implemented automated testing strategies reducing production bugs by 60%</li>
+              <li>React、Vue.js、AngularによるWebアプリケーション開発</li>
+              <li>レスポンシブデザインシステムとコンポーネントライブラリ作成</li>
+              <li>UXデザイナーとの連携によるUI実装</li>
             </ul>
           </div>
 
           <div style={experienceItemStyle}>
-            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>Web Developer</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>Web開発者</h3>
             <p style={{ color: '#666666', margin: '0 0 10px 0', fontStyle: 'italic' }}>
-              CreativeSpace Agency | 2020 - 2021
+              CreativeSpace Agency | 2020年 - 2021年
             </p>
             <ul style={{ color: '#555555', lineHeight: '1.6' }}>
-              <li>Built custom WordPress themes and plugins for client websites</li>
-              <li>Developed interactive animations using GSAP and CSS3 transforms</li>
-              <li>Maintained and optimized legacy codebases improving load times by 45%</li>
-              <li>Participated in agile sprints and collaborated with cross-functional teams</li>
-              <li>Contributed to open-source projects and internal tooling</li>
+              <li>WordPressテーマ・プラグイン開発</li>
+              <li>GSAPを使用したアニメーション開発</li>
+              <li>レガシーコードの保守・最適化</li>
             </ul>
           </div>
 
           <div style={experienceItemStyle}>
-            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>Junior Developer</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>ジュニア開発者</h3>
             <p style={{ color: '#666666', margin: '0 0 10px 0', fontStyle: 'italic' }}>
-              StartupHub Incubator | 2019 - 2020
+              StartupHub Incubator | 2019年 - 2020年
             </p>
             <ul style={{ color: '#555555', lineHeight: '1.6' }}>
-              <li>Learned full-stack development through hands-on projects</li>
-              <li>Built MVP applications using JavaScript, HTML5, and CSS3</li>
-              <li>Worked with startup teams to rapidly prototype ideas</li>
-              <li>Gained experience with version control, deployment, and CI/CD pipelines</li>
+              <li>実践的プロジェクトでのフルスタック開発学習</li>
+              <li>JavaScript、HTML5、CSS3によるMVPアプリ構築</li>
+              <li>スタートアップでのアイデア迅速プロトタイピング</li>
             </ul>
           </div>
         </section>
 
         <section style={sectionStyle}>
-          <h2 style={{ color: '#333333', marginBottom: '20px' }}>Education</h2>
+          <h2 style={{ color: '#333333', marginBottom: '20px' }}>学歴</h2>
           
           <div style={experienceItemStyle}>
-            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>Bachelor of Computer Science</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>コンピュータサイエンス学士</h3>
             <p style={{ color: '#666666', margin: '0 0 10px 0', fontStyle: 'italic' }}>
-              Tokyo Institute of Technology | 2015 - 2019
+              東京工業大学 | 2015年 - 2019年
             </p>
             <p style={{ color: '#555555', lineHeight: '1.6' }}>
-              Graduated Summa Cum Laude (GPA: 3.8/4.0). Specialized in Human-Computer Interaction and Software Engineering.
-              Thesis: "Interactive Game Interfaces for Portfolio Websites" - developed early prototypes of game-based navigation systems.
-              Completed advanced coursework in algorithms, data structures, and modern web technologies.
+              ヒューマンコンピュータインタラクションとソフトウェアエンジニアリング専攻。
+              卒業論文：「ポートフォリオサイト向けインタラクティブゲームインターフェース」
             </p>
           </div>
 
           <div style={experienceItemStyle}>
-            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>Certifications</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 5px 0' }}>資格</h3>
             <div style={{ color: '#555555', lineHeight: '1.6' }}>
               <p><strong>AWS Certified Developer Associate</strong> (2023)</p>
               <p><strong>Google Cloud Professional Developer</strong> (2022)</p>
@@ -185,10 +177,10 @@ const Career: React.FC = () => {
         </section>
 
         <section style={sectionStyle}>
-          <h2 style={{ color: '#333333', marginBottom: '20px' }}>Core Skills</h2>
+          <h2 style={{ color: '#333333', marginBottom: '20px' }}>主要スキル</h2>
           
           <div style={{ marginBottom: '25px' }}>
-            <h3 style={{ color: '#333333', margin: '0 0 10px 0', fontSize: '18px' }}>Frontend Development</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 10px 0', fontSize: '18px' }}>フロントエンド開発</h3>
             <div style={{ 
               display: 'flex', 
               flexWrap: 'wrap', 
@@ -218,7 +210,7 @@ const Career: React.FC = () => {
           </div>
 
           <div style={{ marginBottom: '25px' }}>
-            <h3 style={{ color: '#333333', margin: '0 0 10px 0', fontSize: '18px' }}>Backend & Tools</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 10px 0', fontSize: '18px' }}>バックエンド・ツール</h3>
             <div style={{ 
               display: 'flex', 
               flexWrap: 'wrap', 
@@ -248,7 +240,7 @@ const Career: React.FC = () => {
           </div>
 
           <div style={{ marginBottom: '25px' }}>
-            <h3 style={{ color: '#333333', margin: '0 0 10px 0', fontSize: '18px' }}>Soft Skills</h3>
+            <h3 style={{ color: '#333333', margin: '0 0 10px 0', fontSize: '18px' }}>ソフトスキル</h3>
             <div style={{ 
               display: 'flex', 
               flexWrap: 'wrap', 
@@ -278,14 +270,13 @@ const Career: React.FC = () => {
         </section>
 
         <section style={sectionStyle}>
-          <h2 style={{ color: '#333333', marginBottom: '20px' }}>Achievements</h2>
+          <h2 style={{ color: '#333333', marginBottom: '20px' }}>主な実績</h2>
           <div style={{ color: '#555555', lineHeight: '1.6' }}>
             <ul>
-              <li><strong>Innovation Award</strong> - Best Creative Developer Portfolio (TechFlow Solutions, 2024)</li>
-              <li><strong>Performance Excellence</strong> - Improved team productivity by 35% through code optimization initiatives</li>
-              <li><strong>Open Source Contributor</strong> - 50+ contributions to React ecosystem libraries</li>
-              <li><strong>Tech Speaker</strong> - Presented at 3 local JavaScript meetups on modern React patterns</li>
-              <li><strong>Mentorship Impact</strong> - Successfully mentored 8 junior developers who were promoted within 1 year</li>
+              <li><strong>イノベーション賞</strong> - 最優秀クリエイティブ開発者ポートフォリオ (2024)</li>
+              <li><strong>パフォーマンス優秀賞</strong> - チーム生産性35%向上</li>
+              <li><strong>オープンソース貢献</strong> - Reactエコシステムへ50+貢献</li>
+              <li><strong>技術講演</strong> - JavaScriptミートアップで講演</li>
             </ul>
           </div>
         </section>

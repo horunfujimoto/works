@@ -9,7 +9,6 @@ import './styles/tetris.css'
 import './styles/responsive.css'
 import './styles/accessibility.css'
 import './styles/performance.css'
-import './styles/font-test.css'
 import App from './App.tsx'
 import PerformanceMonitor from './components/PerformanceMonitor'
 

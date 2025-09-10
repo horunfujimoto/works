@@ -24,10 +24,7 @@ html {
   }
 }
 
-/* Optimize font loading */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=optional');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=optional');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=optional');
+/* Font loading optimized in HTML head */
 
 /* Contain layout thrashing */
 .tetris-board-container {

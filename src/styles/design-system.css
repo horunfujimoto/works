@@ -36,9 +36,9 @@
   --color-active-overlay: rgba(255, 255, 255, 0.2);
   
   /* Typography */
-  --font-family-primary: 'Nico Moji', 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-family-secondary: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
-  --font-family-display: 'Nikukyu', 'Poppins', 'Inter', sans-serif;
+  --font-family-primary: 'RocknRoll One', cursive;
+  --font-family-secondary: 'RocknRoll One', cursive;
+  --font-family-display: 'RocknRoll One', cursive;
   
   --font-size-xs: 0.75rem;      /* 12px */
   --font-size-sm: 0.875rem;     /* 14px */
@@ -105,7 +105,7 @@
 }
 
 body {
-  font-family: var(--font-family-primary);
+  font-family: 'RocknRoll One', cursive;
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
   color: var(--color-primary-grey);
@@ -116,16 +116,16 @@ body {
 
 /* ===== TYPOGRAPHY CLASSES ===== */
 .font-display {
-  font-family: var(--font-family-display);
+  font-family: 'RocknRoll One', cursive;
 }
 
 .font-mono {
-  font-family: var(--font-family-secondary);
+  font-family: 'RocknRoll One', cursive;
 }
 
 /* ===== HEADING STYLES ===== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nikukyu', var(--font-family-display) !important;
+  font-family: 'RocknRoll One', cursive !important;
   font-weight: var(--font-weight-bold) !important;
   line-height: var(--line-height-tight);
   margin-bottom: var(--spacing-lg);
@@ -179,7 +179,7 @@ h6 {
   align-items: center;
   justify-content: center;
   padding: var(--spacing-md) var(--spacing-xl);
-  font-family: var(--font-family-primary);
+  font-family: 'RocknRoll One', cursive;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   line-height: 1;
@@ -361,7 +361,7 @@ h6 {
 }
 
 .score-enhanced {
-  font-family: var(--font-family-secondary);
+  font-family: 'RocknRoll One', cursive;
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-white);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);

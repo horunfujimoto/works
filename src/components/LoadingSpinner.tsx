@@ -26,7 +26,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     minHeight: fullScreen ? '100vh' : 'auto',
     backgroundColor: fullScreen ? '#111111' : 'transparent',
     color: '#ffffff',
-    fontFamily: 'var(--font-family-primary)'
+    fontFamily: 'RocknRoll One, cursive'
   };
 
   const spinnerStyle: React.CSSProperties = {

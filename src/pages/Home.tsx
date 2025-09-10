@@ -127,7 +127,7 @@ export default function Home() {
     minHeight: '100vh',
     backgroundColor: '#111111',
     color: '#ffffff',
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'RocknRoll One, cursive',
     padding: isMobile ? '15px' : '20px'
   };
 
@@ -147,7 +147,7 @@ export default function Home() {
   const buttonStyle: React.CSSProperties = {
     padding: isMobile ? '12px 20px' : '12px 24px',
     fontSize: isMobile ? '14px' : '15px',
-    fontFamily: 'var(--font-family-primary)',
+    fontFamily: 'RocknRoll One, cursive',
     fontWeight: '500',
     backgroundColor: 'var(--color-primary-grey)',
     color: 'var(--color-primary-white)',
@@ -204,7 +204,7 @@ export default function Home() {
         <p style={{ 
           fontSize: isMobile ? '1rem' : '1.2rem', 
           color: 'var(--color-quaternary-white)',
-          fontFamily: 'var(--font-family-primary)',
+          fontFamily: 'RocknRoll One, cursive',
           fontWeight: '400',
           lineHeight: '1.5',
           maxWidth: '600px',
@@ -347,7 +347,7 @@ export default function Home() {
         </p>
         {!isMobile && (
           <p style={{ 
-            fontFamily: 'var(--font-family-secondary)',
+            fontFamily: 'RocknRoll One, cursive',
             fontSize: '12px',
             color: 'var(--color-quaternary-white)',
             marginBottom: '8px'

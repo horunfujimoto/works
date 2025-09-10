@@ -30,7 +30,7 @@ const LoadingFallback = () => (
       <div className="loading-spinner" />
       <p style={{
         color: 'var(--color-tertiary-grey)',
-        fontFamily: 'var(--font-family-primary)',
+        fontFamily: 'RocknRoll One, cursive',
         fontSize: '16px'
       }}>
         Loading portfolio section...

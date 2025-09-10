@@ -127,7 +127,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const buttonStyle: React.CSSProperties = {
     padding: isMobile ? '8px 12px' : '6px 12px',
     fontSize: isMobile ? '12px' : '11px',
-    fontFamily: 'var(--font-family-primary)',
+    fontFamily: 'RocknRoll One, cursive',
     fontWeight: '500',
     backgroundColor: 'var(--color-primary-grey)',
     color: 'var(--color-primary-white)',

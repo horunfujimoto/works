@@ -5,7 +5,7 @@ const Hobbies: React.FC = () => {
   const pageStyle: React.CSSProperties = {
     backgroundColor: '#f5f5f5',
     color: '#333333',
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'RocknRoll One, cursive',
     padding: '40px 20px'
   };
 
@@ -38,7 +38,7 @@ const Hobbies: React.FC = () => {
     textDecoration: 'none',
     borderRadius: 'var(--radius-lg)',
     fontSize: isMobile ? '14px' : '15px',
-    fontFamily: 'var(--font-family-primary)',
+    fontFamily: 'RocknRoll One, cursive',
     fontWeight: '500',
     minHeight: '44px',
     touchAction: 'manipulation',
@@ -57,27 +57,27 @@ const Hobbies: React.FC = () => {
 
   const hobbies = [
     {
-      title: "🎮 Interactive Game Development",
-      description: "Building creative games and interactive experiences from scratch. Currently developing \"Pixel Quest\", a retro-style RPG with modern mechanics. My Tetris Portfolio project showcases how game mechanics can enhance traditional web experiences, combining entertainment with functional design.",
+      title: "🎮 インタラクティブゲーム開発",
+      description: "クリエイティブなゲームやインタラクティブ体験をゼロから構築。レトロスタイルRPG「Pixel Quest」を開発中。テトリスポートフォリオではゲームメカニクスとWeb体験の融合を実現。",
       icon: "🎮",
-      skills: ["JavaScript/TypeScript", "React Game Logic", "Canvas API", "Game Design", "UI/UX"],
-      projects: ["Tetris Portfolio", "Pixel Quest RPG", "Web-based Snake Game"],
+      skills: ["JavaScript/TypeScript", "Reactゲームロジック", "Canvas API", "ゲームデザイン"],
+      projects: ["テトリスポートフォリオ", "Pixel Quest RPG", "Webベーススネークゲーム"],
       featured: true
     },
     {
-      title: "📸 Street & Urban Photography",
-      description: "Capturing the essence of city life through candid street photography and architectural exploration. Specializing in golden hour urban landscapes and spontaneous human moments. My work focuses on finding beauty in everyday scenes and telling stories through visual composition.",
+      title: "📸 ストリート・アーバン写真",
+      description: "ストリート写真と建築探求で都市生活の本質を捉える。ゴールデンアワーの都市景観と自然な人間の瞬間を専門としています。日常シーンに美しさを見つけ、視覚的構成で物語を語ることに焦点。",
       icon: "📸",
-      skills: ["Sony α7R IV", "Adobe Lightroom", "Composition Theory", "Color Grading", "Street Photography"],
-      projects: ["Tokyo Streets Series", "Architecture & Light", "Urban Portraits"],
+      skills: ["Sony α7R IV", "Adobe Lightroom", "構図理論", "カラーグレーディング"],
+      projects: ["東京ストリートシリーズ", "建築と光", "アーバンポートレート"],
       featured: false
     },
     {
-      title: "🎵 Electronic Music Production",
-      description: "Composing ambient electronic music and chiptune soundtracks for games and media. Creating atmospheric soundscapes that blend vintage synthesizer sounds with modern production techniques. Recently released \"Digital Dreams\" - an album inspired by retro gaming aesthetics.",
+      title: "🎵 エレクトロニックミュージック制作",
+      description: "ゲームやメディア向けのアンビエントエレクトロニックミュージックやチップチューンサウンドトラックを作曲。ビンテージシンセサイザーサウンドとモダン制作技術を融合したサウンドスケープを創造。レトロゲーミング美学のアルバム「Digital Dreams」をリリース。",
       icon: "🎵",
-      skills: ["Ableton Live", "Analog Synthesizers", "Audio Mastering", "Sound Design", "MIDI Programming"],
-      projects: ["Digital Dreams Album", "Game Soundtrack Library", "Ambient Podcast Series"],
+      skills: ["Ableton Live", "アナログシンセサイザー", "オーディオマスタリング", "サウンドデザイン"],
+      projects: ["Digital Dreamsアルバム", "ゲームサウンドトラックライブラリ", "アンビエントポッドキャストシリーズ"],
       featured: true
     },
     {
@@ -124,7 +124,7 @@ const Hobbies: React.FC = () => {
             e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
           }}
         >
-          🎮 ← Back to Tetris Portfolio
+          🎮 ← テトリスポートフォリオに戻る
         </Link>
 
         <header style={headerStyle}>
@@ -142,10 +142,10 @@ const Hobbies: React.FC = () => {
             fontSize: isMobile ? '1.1rem' : '1.2rem', 
             color: 'var(--color-tertiary-grey)', 
             margin: '15px 0 0 0',
-            fontFamily: 'var(--font-family-primary)',
+            fontFamily: 'RocknRoll One, cursive',
             fontWeight: '400'
           }}>
-            Creative Pursuits, Personal Projects & Life Beyond Code
+クリエイティブな追求とコードを超えた人生
           </p>
         </header>
 
@@ -156,11 +156,10 @@ const Hobbies: React.FC = () => {
             color: 'var(--color-secondary-grey)',
             maxWidth: '700px',
             margin: '0 auto',
-            fontFamily: 'var(--font-family-primary)'
+            fontFamily: 'RocknRoll One, cursive'
           }}>
-            Beyond writing code, I'm passionate about creative pursuits that fuel my imagination and inspire my technical work. 
-            These hobbies represent the intersection of technology, art, and personal expression—each one contributing to my 
-            growth as both a developer and a creative individual. 🌟
+コーディング以外に、技術的な仕事にインスパイアを与えるクリエイティブな追求に情熱を注いでいます。
+これらの趣味は技術、アート、個人的表現の交点であり、開発者とクリエイターとしての成長に貢献しています。🌟
           </p>
         </div>
 
@@ -223,7 +222,7 @@ const Hobbies: React.FC = () => {
                 color: 'var(--color-primary-grey)', 
                 margin: '0 0 12px 0',
                 fontSize: isMobile ? '1.2rem' : '1.3rem',
-                fontFamily: 'var(--font-family-display)',
+                fontFamily: 'RocknRoll One, cursive',
                 fontWeight: '700',
                 lineHeight: '1.3'
               }}>
@@ -235,7 +234,7 @@ const Hobbies: React.FC = () => {
                 lineHeight: '1.6',
                 margin: '0 0 16px 0',
                 fontSize: isMobile ? '14px' : '15px',
-                fontFamily: 'var(--font-family-primary)'
+                fontFamily: 'RocknRoll One, cursive'
               }}>
                 {hobby.description}
               </p>
@@ -320,22 +319,22 @@ const Hobbies: React.FC = () => {
             color: 'var(--color-primary-grey)', 
             margin: '0 0 16px 0',
             fontSize: isMobile ? '1.3rem' : '1.5rem',
-            fontFamily: 'var(--font-family-display)',
+            fontFamily: 'RocknRoll One, cursive',
             fontWeight: '700'
           }}>
-            Let's Collaborate & Create Together
+一緒にコラボレーションして作品を創造しましょう
           </h3>
           <p style={{ 
             color: 'var(--color-secondary-grey)', 
             margin: '0 0 24px 0',
             lineHeight: '1.7',
             fontSize: isMobile ? '15px' : '16px',
-            fontFamily: 'var(--font-family-primary)',
+            fontFamily: 'RocknRoll One, cursive',
             maxWidth: '600px',
           }}>
-            I'm always excited to collaborate on creative projects, share knowledge, and learn from fellow enthusiasts. 
-            Whether it's brainstorming a new game concept, jamming on music ideas, or exploring photography techniques—
-            the best creative work happens through community and shared inspiration. 🌟
+クリエイティブプロジェクトでのコラボ、知識共有、同好者からの学びにいつも想狀しています。
+新ゲームコンセプトのブレスト、音楽アイデアのジャムセッション、写真技法の探求など—
+最高のクリエイティブ作品はコミュニティと共有インスピレーションから生まれます。🌟
           </p>
           <div style={{ 
             display: 'flex', 
@@ -354,7 +353,7 @@ const Hobbies: React.FC = () => {
                 borderRadius: 'var(--radius-lg)',
                 cursor: 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
-                fontFamily: 'var(--font-family-primary)',
+                fontFamily: 'RocknRoll One, cursive',
                 fontWeight: '600',
                 transition: 'all 0.2s ease',
                 minHeight: '48px',
@@ -371,7 +370,7 @@ const Hobbies: React.FC = () => {
                 e.currentTarget.style.boxShadow = 'var(--shadow-sm)';
               }}
             >
-              🎨 View Creative Portfolio
+🎨 クリエイティブポートフォリオを見る
             </button>
             <button 
               style={{
@@ -382,7 +381,7 @@ const Hobbies: React.FC = () => {
                 borderRadius: 'var(--radius-lg)',
                 cursor: 'pointer',
                 fontSize: isMobile ? '14px' : '16px',
-                fontFamily: 'var(--font-family-primary)',
+                fontFamily: 'RocknRoll One, cursive',
                 fontWeight: '600',
                 transition: 'all 0.2s ease',
                 minHeight: '48px',
@@ -400,7 +399,7 @@ const Hobbies: React.FC = () => {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              💬 Let's Connect
+💬 連絡してみましょう
             </button>
           </div>
           <p style={{ 
@@ -409,7 +408,7 @@ const Hobbies: React.FC = () => {
             fontSize: '13px',
             fontStyle: 'italic'
           }}>
-            Always open to interesting projects and creative collaborations
+興味深いプロジェクトやクリエイティブなコラボレーションにいつでもオープン
           </p>
         </div>
       </div>

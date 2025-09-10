@@ -92,7 +92,7 @@ const TetrisBlock: React.FC<TetrisBlockProps> = ({
     color: '#ffffff',
     cursor: onClick ? 'pointer' : 'default',
     userSelect: 'none',
-    fontFamily: isPortfolio ? 'var(--font-family-display)' : 'var(--font-family-primary)',
+    fontFamily: 'RocknRoll One, cursive',
     position: 'relative',
     overflow: 'hidden',
     whiteSpace: 'pre-line',
